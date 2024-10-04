@@ -19,25 +19,36 @@ class MainActivity : AppCompatActivity() {
 
         // батон поиск. анонимный класс
         val btnSearch = findViewById<Button>(R.id.btn_search)
-        val btnSearchClickListener: View.OnClickListener = object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                Toast.makeText(this@MainActivity, "Нажали на ${btnSearch.text}!", Toast.LENGTH_SHORT).show()
-            }
+        btnSearch.setOnClickListener {
+            val searchIntent = Intent(this, SearchActivity::class.java)
+            startActivity(searchIntent)
         }
-
-        btnSearch.setOnClickListener(btnSearchClickListener)
+//        val btnSearchClickListener: View.OnClickListener = object : View.OnClickListener {
+//            override fun onClick(v: View?) {
+//                Toast.makeText(this@MainActivity, "Нажали на ${btnSearch.text}!", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+//        btnSearch.setOnClickListener(btnSearchClickListener)
 
         // батон медиатека. лямбда
         val btnLib = findViewById<Button>(R.id.btn_library)
         btnLib.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Нажали на ${btnLib.text}!", Toast.LENGTH_SHORT).show()
+            val libIntent = Intent(this, MediaLibActivity::class.java)
+            startActivity(libIntent)
         }
+//        btnLib.setOnClickListener {
+//            Toast.makeText(this@MainActivity, "Нажали на ${btnLib.text}!", Toast.LENGTH_SHORT).show()
+//        }
 
-        // батон поиск. лямбда
+        // батон настройки. лямбда
         val btnSettings = findViewById<Button>(R.id.btn_settings)
         btnSettings.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Нажали на ${btnSettings.text}!", Toast.LENGTH_SHORT).show()
+            val settingsIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingsIntent)
         }
+//        btnSettings.setOnClickListener {
+//            Toast.makeText(this@MainActivity, "Нажали на ${btnSettings.text}!", Toast.LENGTH_SHORT).show()
+//        }
 
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
 //            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
