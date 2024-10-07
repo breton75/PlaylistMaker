@@ -5,7 +5,7 @@
     android:id="@+id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/layout_settings"
@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left|center"
                     android:text="@string/btn_settings"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/header_font_size"
                     android:textColor="@color/black">
                 </TextView>
 
@@ -82,14 +82,11 @@
 
             <Switch
                 android:id="@+id/switch_theme_select"
-                android:layout_width="@dimen/btn_width"
-                android:layout_height="@dimen/btn_height"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
                 android:layout_gravity="start|center_vertical"
-                android:layout_marginEnd="6dp"
-                android:layout_marginStart="0dp"
-                android:src="@drawable/support"
-                android:background="@color/white"
-                app:tint="#AEAFB4">
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="0dp">
             </Switch>
         </LinearLayout>
 
