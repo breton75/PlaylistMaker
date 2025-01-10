@@ -44,11 +44,10 @@
                     android:id="@+id/lbl_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
                     android:gravity="left|center"
                     android:text="@string/title"
-                    android:layout_margin="12dp"
-                    android:textSize="@dimen/header_font_size"
-                    android:textColor="@color/white">
+                    style="@style/title_main">
                 </TextView>
 
             </FrameLayout>
@@ -77,9 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/white"
                 android:text="@string/btn_search"
-                android:foreground="?attr/selectableItemBackground"
                 style="@style/big_button_style"
                 app:cornerRadius="@dimen/btn_corner_radius"
                 app:icon="@drawable/search"
@@ -93,9 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
                 android:text="@string/btn_library"
-                android:foreground="?attr/selectableItemBackground"
                 style="@style/big_button_style"
                 app:cornerRadius="@dimen/btn_corner_radius"
                 app:icon="@drawable/library"
@@ -109,9 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
                 android:text="@string/btn_settings"
-                android:foreground="?attr/selectableItemBackground"
                 style="@style/big_button_style"
                 app:cornerRadius="@dimen/btn_corner_radius"
                 app:icon="@drawable/settings"

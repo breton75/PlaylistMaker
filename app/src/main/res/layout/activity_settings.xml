@@ -36,6 +36,7 @@
                     android:layout_margin="4dp"
                     android:visibility="visible"
                     android:backgroundTint="@color/white"
+                    android:tintMode="screen"
                     android:src="@drawable/arrow_back">
                 </ImageButton>
 
@@ -45,8 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left|center"
                     android:text="@string/btn_settings"
-                    android:textSize="@dimen/header_font_size"
-                    android:textColor="@color/black">
+                    style="@style/title_other">
                 </TextView>
 
             </LinearLayout>
@@ -76,8 +76,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_gravity="start|center_vertical"
                 android:text="@string/theme_select"
-                android:textSize="@dimen/settings_font_size"
-                android:textColor="@color/black">
+                android:textSize="@dimen/settings_font_size">
             </TextView>
 
             <Switch
@@ -104,8 +103,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_gravity="start|center_vertical"
                 android:text="@string/str_share_app"
-                android:textSize="@dimen/settings_font_size"
-                android:textColor="@color/black">
+                android:textSize="@dimen/settings_font_size">
             </TextView>
 
             <ImageButton
@@ -135,8 +133,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_gravity="start|center_vertical"
                 android:text="@string/str_ask_support"
-                android:textSize="@dimen/settings_font_size"
-                android:textColor="@color/black">
+                android:textSize="@dimen/settings_font_size">
             </TextView>
 
             <ImageButton
@@ -166,8 +163,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_gravity="start|center_vertical"
                 android:text="@string/str_user_agreement"
-                android:textSize="@dimen/settings_font_size"
-                android:textColor="@color/black">
+                android:textSize="@dimen/settings_font_size">
             </TextView>
 
             <ImageButton

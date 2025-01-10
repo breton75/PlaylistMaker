@@ -4,4 +4,12 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+
+    <style name="Theme.PlaylistMaker" parent="Base.Theme.PlaylistMaker">
+
+        <item name="android:background">#1A1B22</item>
+        <item name="android:foregroundTint">#FFFFFF</item>
+
+    </style>
 </resources>
