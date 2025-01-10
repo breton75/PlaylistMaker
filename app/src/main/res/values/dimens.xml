@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_corner_radius">16dp</dimen>
+    <dimen name="btn_width">24dp</dimen>
+    <dimen name="btn_height">24dp</dimen>
+    <dimen name="settings_font_size">16sp</dimen>
+    <dimen name="header_font_size">22sp</dimen>
+</resources>
