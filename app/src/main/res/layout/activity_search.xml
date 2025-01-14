@@ -7,14 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
 
-    <TextView
-        android:id="@+id/text_view_title"
+    <LinearLayout
+        android:id="@+id/layout_search"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/btn_search"
-        android:textSize="@dimen/header_font_size"
-        android:textColor="@color/black"
-        android:background="@color/gray">
-    </TextView>
+        android:orientation="vertical"
+        android:gravity="top"
+        android:padding="0dp"
+        style="@style/Theme.settings">
+
+        <TextView
+            android:id="@+id/search_text_view_title"
+            style="@style/title_other"
+            android:text="@string/btn_search">
+        </TextView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
