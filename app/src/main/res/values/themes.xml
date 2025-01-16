@@ -35,4 +35,11 @@
         <item name="android:trackTint">@color/light_switch_bkg</item>
     </style>
 
+    <style name="Theme.search_edit" parent="Theme.Material3.DayNight.NoActionBar" >
+        <item name="android:textColor">@color/light_icon_frg</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:drawableTint">@color/light_icon_frg</item>
+        <item name="tint">@color/light_icon_frg</item>
+    </style>
+
 </resources>

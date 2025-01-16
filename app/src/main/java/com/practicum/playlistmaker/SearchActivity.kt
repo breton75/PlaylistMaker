@@ -6,11 +6,7 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.LinearLayout
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,10 +14,11 @@ class SearchActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_search)
 
-
-        val linearLayout = findViewById<LinearLayout>(R.id.layout_search)
-        val inputEditText = findViewById<EditText>(R.id.inputEditText)
+//        val linearLayout = findViewById<LinearLayout>(R.id.layout_search)
+        val inputEditText = findViewById<EditText>(R.id.search_edit_text)
         val clearButton = findViewById<ImageView>(R.id.btn_clear)
+
+        clearButton.visibility = View.INVISIBLE
 
         clearButton.setOnClickListener {
             inputEditText.setText("")
@@ -34,40 +31,14 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (s.isNullOrEmpty()) {
-                    linearLayout.setBackgroundColor( getColor(R.color.white))
-                } else {
-                    val input = s.toString()
-                    if (isPrime(input.toInt())) {
-                        linearLayout.setBackgroundColor(getColor(R.color.light_switch_bkg))
-                    } else {
-                        linearLayout.setBackgroundColor(getColor(R.color.dark_icon_bkg))
-                    }
-                }
-                clearButton.visibility = clearButtonVisibility(s)
+                clearButton.visibility = if (s.isNullOrEmpty()) View.GONE else View.VISIBLE //clearButtonVisibility(s)
             }
 
             override fun afterTextChanged(s: Editable?) {
                 // empty
             }
         }
+
         inputEditText.addTextChangedListener(simpleTextWatcher)
-    }
-
-    private fun clearButtonVisibility(s: CharSequence?): Int {
-        return if (s.isNullOrEmpty()) {
-            View.GONE
-        } else {
-            View.VISIBLE
-        }
-    }
-
-    private fun isPrime(number: Int): Boolean {
-        for (i in 2..number / 2) {
-            if (number % i == 0) {
-                return false
-            }
-        }
-        return true
     }
 }

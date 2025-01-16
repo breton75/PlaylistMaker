@@ -5,4 +5,5 @@
     <dimen name="settings_item_btn_height">24dp</dimen>
     <dimen name="settings_font_size">16sp</dimen>
     <dimen name="header_font_size">22sp</dimen>
+    <dimen name="edit_corner_radius">8dp</dimen>
 </resources>
