@@ -16,6 +16,7 @@
             android:name=".MediaLibActivity"
             android:exported="false" />
         <activity
+            android:windowSoftInputMode="stateVisible"
             android:name=".SearchActivity"
             android:exported="false" />
         <activity

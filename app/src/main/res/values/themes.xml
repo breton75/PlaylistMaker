@@ -36,10 +36,11 @@
     </style>
 
     <style name="Theme.search_edit" parent="Theme.Material3.DayNight.NoActionBar" >
-        <item name="android:textColor">@color/light_icon_frg</item>
-        <item name="android:background">@color/white</item>
-        <item name="android:drawableTint">@color/light_icon_frg</item>
-        <item name="tint">@color/light_icon_frg</item>
+        <item name="android:textColor">@color/light_edit_text</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:drawableTint">@color/light_edit_text</item>
+        <item name="tint">@color/light_edit_text</item>
+        <item name="android:textColorHint">@color/light_edit_text</item>
     </style>
 
 </resources>

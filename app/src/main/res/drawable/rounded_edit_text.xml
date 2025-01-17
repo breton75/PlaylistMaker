@@ -4,10 +4,10 @@
 
     <item android:state_pressed="true" android:state_focused="true">
         <shape>
-            <solid android:color="#FF8000"/>
+            <solid android:color="#FFFFFF"/>
             <stroke
-                android:width="2.3dp"
-                android:color="#FF8000" />
+                android:width="0.5dp"
+                android:color="#FFFFFF" />
             <corners
                 android:radius="8dp" />
         </shape>
@@ -15,10 +15,10 @@
 
     <item android:state_pressed="true" android:state_focused="false">
         <shape>
-            <solid android:color="#FF8000"/>
+            <solid android:color="#FFFFFF"/>
             <stroke
-                android:width="2.3dp"
-                android:color="#FF8000" />
+                android:width="0.5dp"
+                android:color="#FFFFFF" />
             <corners
                 android:radius="8dp" />
         </shape>
@@ -28,8 +28,8 @@
         <shape>
             <solid android:color="#FFFFFF"/>
             <stroke
-                android:width="2.3dp"
-                android:color="#FF8000" />
+                android:width="0.5dp"
+                android:color="#FFFFFF" />
             <corners
                 android:radius="8dp" />
         </shape>
@@ -37,15 +37,15 @@
 
     <item android:state_pressed="false" android:state_focused="false">
         <shape>
-            <gradient
+            <!--gradient
                 android:startColor="#F2F2F2"
                 android:centerColor="#FFFFFF"
                 android:endColor="#FFFFFF"
                 android:angle="270"
-                />
+                /-->
             <stroke
-                android:width="0.7dp"
-                android:color="#BDBDBD" />
+                android:width="0.5dp"
+                android:color="#FFFFFF" />
             <corners
                 android:radius="8dp" />
         </shape>
@@ -56,7 +56,7 @@
             <padding
                 android:left="12dp"
                 android:top="8dp"
-                android:right="4dp"
+                android:right="36dp"
                 android:bottom="8dp"
                 />
         </shape>

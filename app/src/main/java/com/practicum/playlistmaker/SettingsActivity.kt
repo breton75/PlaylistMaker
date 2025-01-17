@@ -19,8 +19,7 @@ class SettingsActivity : AppCompatActivity() {
         val btnAgree   = findViewById<ImageButton>(R.id.btn_agreement)
 
         btnBack.setOnClickListener {
-            val backIntent = Intent(this, MainActivity::class.java)
-            startActivity(backIntent)
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         btnSupport.setOnClickListener {

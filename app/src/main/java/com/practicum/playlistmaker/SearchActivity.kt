@@ -1,10 +1,12 @@
 package com.practicum.playlistmaker
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,18 +16,16 @@ class SearchActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_search)
 
-//        val linearLayout = findViewById<LinearLayout>(R.id.layout_search)
+        val btnBack       = findViewById<ImageButton>(R.id.btn_arrow_back)
         val inputEditText = findViewById<EditText>(R.id.search_edit_text)
-        val clearButton = findViewById<ImageView>(R.id.btn_clear)
+        val clearButton   = findViewById<ImageView>(R.id.btn_clear)
 
-        clearButton.visibility = View.INVISIBLE
-
-        clearButton.setOnClickListener {
-            inputEditText.setText("")
+        btnBack.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         // логика по работе с введённым значением
-        val simpleTextWatcher = object : TextWatcher {
+        val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 // empty
             }
@@ -39,6 +39,15 @@ class SearchActivity : AppCompatActivity() {
             }
         }
 
-        inputEditText.addTextChangedListener(simpleTextWatcher)
+        clearButton.setOnClickListener {
+            inputEditText.setText("")
+        }
+
+        clearButton.callOnClick()
+
+        inputEditText.addTextChangedListener(textWatcher)
+        inputEditText.requestFocus()
+
     }
+
 }
