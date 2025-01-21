@@ -43,7 +43,6 @@ class SearchActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {
                 searchText = inputEditText.toString()
-                Log.d("my1", "searchText")
             }
         }
 

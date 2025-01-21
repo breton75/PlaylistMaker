@@ -73,19 +73,18 @@
 
                 <EditText
                     android:id="@+id/search_edit_text"
+                    style="@style/search_edit"
                     android:background="@drawable/rounded_edit_text"
-                    android:drawableLeft="@drawable/search_edit"
-                    android:textCursorDrawable="@drawable/edit_cursor"
                     android:cursorVisible="true"
-                    style="@style/search_edit">
-                </EditText>
+                    android:drawableLeft="@drawable/search_edit"
+                    android:textCursorDrawable="@drawable/edit_cursor"></EditText>
 
                 <ImageButton
                     android:id="@+id/btn_clear"
                     style="@style/search_btn"
                     android:layout_alignEnd="@id/search_edit_text"
                     android:layout_alignTop="@id/search_edit_text"
-                    android:src="@drawable/arrow_back">
+                    android:src="@android:drawable/ic_menu_close_clear_cancel">
                 </ImageButton>
 
                 <LinearLayout
