@@ -28,9 +28,9 @@ class SettingsActivity : AppCompatActivity() {
             intent.setData(Uri.parse("mailto:"))
             intent.setType("multipart/mixed")
 
-            intent.putExtra(Intent.EXTRA_EMAIL,     "sviridov.sergey.0@yandex.ru")
-            intent.putExtra(Intent.EXTRA_SUBJECT,   "Сообщение разработчикам и разработчицам приложения Playlist Maker")
-            intent.putExtra(Intent.EXTRA_TEXT,      "Спасибо разработчикам и разработчицам за крутое приложение!");
+            intent.putExtra(Intent.EXTRA_EMAIL,     getString(R.string.str_email))
+            intent.putExtra(Intent.EXTRA_SUBJECT,   getString(R.string.str_subject))
+            intent.putExtra(Intent.EXTRA_TEXT,      getString(R.string.str_message));
 
             if(intent.resolveActivity(packageManager) != null)
                 startActivity(intent)
@@ -40,7 +40,7 @@ class SettingsActivity : AppCompatActivity() {
 
             val intent = Intent(Intent.ACTION_SEND)
             intent.setType("text/plain")
-            intent.putExtra(Intent.EXTRA_TEXT,      "https://practicum.yandex.ru/profile/android-developer-plus/");
+            intent.putExtra(Intent.EXTRA_TEXT,      getString(R.string.str_share_link));
 
             startActivity(Intent.createChooser(intent, ""))
 
@@ -48,7 +48,7 @@ class SettingsActivity : AppCompatActivity() {
 
         btnAgree.setOnClickListener {
 
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/legal/practicum_offer/"));
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.str_agree_link)))
             startActivity(intent)
 
         }

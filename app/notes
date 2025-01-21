@@ -1,0 +1,14 @@
+А. Чтобы сразу появлялась клавиатура при установке фокуса не EditText необходимо
+    (способ через InputMethodManager = getSystemService(INPUT_METHOD_SERVICE) не работает почему то):
+
+  1. для нужной активити (SearchActivity) в AndroidManifest добавить строку: android:windowSoftInputMode="stateVisible"
+   должно быть так:
+
+           <activity
+               android:windowSoftInputMode="stateVisible"
+               android:name=".SearchActivity"
+               android:exported="false" />
+
+   2. в файле кода .kt прописать в нужном месте
+
+        inputEditText.requestFocus()

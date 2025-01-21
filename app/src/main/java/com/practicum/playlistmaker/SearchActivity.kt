@@ -2,15 +2,21 @@ package com.practicum.playlistmaker
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class SearchActivity : AppCompatActivity() {
+
+    var searchText: String? = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -31,23 +37,50 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                clearButton.visibility = if (s.isNullOrEmpty()) View.GONE else View.VISIBLE //clearButtonVisibility(s)
+                clearButton.visibility = if (s.isNullOrEmpty()) View.GONE else View.VISIBLE
+
             }
 
             override fun afterTextChanged(s: Editable?) {
-                // empty
+                searchText = inputEditText.toString()
+                Log.d("my1", "searchText")
             }
         }
 
         clearButton.setOnClickListener {
             inputEditText.setText("")
+
+            val imm: InputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(inputEditText.windowToken, 0);
         }
 
+        inputEditText.addTextChangedListener(textWatcher)
         clearButton.callOnClick()
 
-        inputEditText.addTextChangedListener(textWatcher)
-        inputEditText.requestFocus()
+    }
 
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+
+        outState.putString(SEARCH_EDIT_TEXT, searchText)
+
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onRestoreInstanceState(savedInstanceState, persistentState)
+
+        val inputEditText = findViewById<EditText>(R.id.search_edit_text)
+
+        if(savedInstanceState != null) {
+
+            searchText = savedInstanceState.getString(SEARCH_EDIT_TEXT)
+            inputEditText.setText(searchText)
+
+        }
+    }
+
+    companion object {
+        const val SEARCH_EDIT_TEXT = "SEARCH_EDIT_TEXT"
     }
 
 }
