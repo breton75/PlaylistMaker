@@ -7,14 +7,123 @@
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
 
-    <TextView
-        android:id="@+id/text_view_title"
+    <LinearLayout
+        android:id="@+id/layout_global"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/btn_search"
-        android:textSize="@dimen/header_font_size"
-        android:textColor="@color/black"
-        android:background="@color/gray">
-    </TextView>
+        android:orientation="vertical"
+        android:gravity="top"
+        android:padding="0dp"
+        style="@style/Theme.settings">
+
+        <LinearLayout
+            android:id="@+id/layout_panel_header"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="top">
+
+            <LinearLayout
+                android:id="@+id/layout_title"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="top">
+
+                <ImageButton
+                    android:id="@+id/btn_arrow_back"
+                    style="@style/settings_btn_back">
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/text_view_title"
+                    android:text="@string/btn_search"
+                    style="@style/title_other">
+                </TextView>
+
+            </LinearLayout>
+
+            <Button android:id="@+id/btn_search_list"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="right|center"
+                android:layout_margin="4dp"
+                android:visibility="invisible">
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="top"
+            android:focusableInTouchMode="true"
+            style="@style/Theme.settings">
+
+
+            <RelativeLayout
+                android:id="@+id/layout_edit_left"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginVertical="8dp"
+                android:gravity="left|center_vertical">
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    android:background="@drawable/rounded_edit_text"
+                    android:drawableLeft="@drawable/search_edit"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:cursorVisible="true"
+                    style="@style/search_edit">
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/btn_clear"
+                    style="@style/search_btn"
+                    android:layout_alignEnd="@id/search_edit_text"
+                    android:layout_alignTop="@id/search_edit_text"
+                    android:src="@drawable/arrow_back">
+                </ImageButton>
+
+                <LinearLayout
+                    android:id="@+id/layout_right"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:gravity="left|center"
+                    android:layout_toRightOf="@id/search_edit_text"
+                    style="@style/Theme.settings">
+
+                    <ImageButton
+                        android:id="@+id/btn"
+                        style="@style/search_btn"
+                        android:layout_toEndOf="@id/btn_clear"
+                        android:src="@android:drawable/ic_menu_sort_by_size">
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/btn_filter"
+                        style="@style/search_btn"
+                        android:layout_toEndOf="@id/btn"
+                        android:src="@android:drawable/ic_menu_info_details">
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/btn_voice"
+                        style="@style/search_btn"
+                        android:layout_toEndOf="@id/btn_filter"
+                        android:src="@android:drawable/ic_menu_agenda">
+                    </ImageButton>
+                </LinearLayout>
+            </RelativeLayout >
+            <!-- layout_edit_left -->
+
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
