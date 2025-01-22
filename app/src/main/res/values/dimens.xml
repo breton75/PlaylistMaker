@@ -7,4 +7,5 @@
     <dimen name="header_font_size">22sp</dimen>
     <dimen name="edit_corner_radius">8dp</dimen>
     <dimen name="icon_size_16">16dp</dimen>
+    <dimen name="icon_size_24">24dp</dimen>
 </resources>

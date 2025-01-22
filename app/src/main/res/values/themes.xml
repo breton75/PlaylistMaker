@@ -43,4 +43,9 @@
         <item name="android:textColorHint">@color/light_edit_text</item>
     </style>
 
+    <style name="Theme.search_edit_btn" parent="Widget.MaterialComponents.Button.UnelevatedButton" >
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="iconTint">@color/light_edit_search_icon_btn</item>
+    </style>
+
 </resources>

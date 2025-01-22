@@ -9,115 +9,111 @@
 
     <LinearLayout
         android:id="@+id/layout_global"
+        style="@style/Theme.settings"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="top"
-        android:padding="0dp"
-        style="@style/Theme.settings">
+        android:orientation="vertical"
+        android:padding="0dp">
 
         <LinearLayout
             android:id="@+id/layout_panel_header"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:orientation="horizontal"
-            android:gravity="top">
+            android:gravity="top"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/layout_title"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:gravity="top">
+                android:layout_weight="1"
+                android:gravity="top"
+                android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/btn_arrow_back"
-                    style="@style/settings_btn_back">
-                </ImageButton>
+                    style="@style/settings_btn_back"/>
 
                 <TextView
                     android:id="@+id/text_view_title"
-                    android:text="@string/btn_search"
-                    style="@style/title_other">
-                </TextView>
+                    style="@style/title_other"
+                    android:text="@string/btn_search"/>
 
             </LinearLayout>
 
-            <Button android:id="@+id/btn_search_list"
+            <Button
+                android:id="@+id/btn_search_list"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:gravity="right|center"
                 android:layout_margin="4dp"
-                android:visibility="invisible">
-            </Button>
+                android:gravity="end|center"
+                android:visibility="invisible"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_search"
-            android:orientation="horizontal"
+            style="@style/Theme.settings"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:gravity="top"
             android:focusableInTouchMode="true"
-            style="@style/Theme.settings">
+            android:gravity="top"
+            android:orientation="horizontal">
 
-
-            <RelativeLayout
+            <FrameLayout
                 android:id="@+id/layout_edit_left"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginVertical="8dp"
-                android:gravity="left|center_vertical">
+                android:gravity="start|center_vertical">
 
                 <EditText
                     android:id="@+id/search_edit_text"
                     style="@style/search_edit"
+                    android:autofillHints=""
                     android:background="@drawable/rounded_edit_text"
                     android:cursorVisible="true"
-                    android:drawableLeft="@drawable/search_edit"
-                    android:textCursorDrawable="@drawable/edit_cursor"></EditText>
+                    android:drawableStart="@drawable/search_edit"
+                    android:inputType="text"
+                    android:textCursorDrawable="@drawable/edit_cursor"/>
 
                 <ImageButton
                     android:id="@+id/btn_clear"
-                    style="@style/search_btn"
-                    android:layout_alignEnd="@id/search_edit_text"
-                    android:layout_alignTop="@id/search_edit_text"
-                    android:src="@android:drawable/ic_menu_close_clear_cancel">
-                </ImageButton>
+                    style="@style/search_edit_btn"
+                    android:contentDescription="@android:string/cancel"
+                    android:scaleType="center"
+                    android:src="@drawable/close_clear" />
 
-                <LinearLayout
-                    android:id="@+id/layout_right"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:gravity="left|center"
-                    android:layout_toRightOf="@id/search_edit_text"
-                    style="@style/Theme.settings">
+            </FrameLayout>
 
-                    <ImageButton
-                        android:id="@+id/btn"
-                        style="@style/search_btn"
-                        android:layout_toEndOf="@id/btn_clear"
-                        android:src="@android:drawable/ic_menu_sort_by_size">
-                    </ImageButton>
+            <FrameLayout
+                android:id="@+id/layout_right"
+                style="@style/Theme.settings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center"
+                android:orientation="horizontal"
+                android:visibility="gone">
 
-                    <ImageButton
-                        android:id="@+id/btn_filter"
-                        style="@style/search_btn"
-                        android:layout_toEndOf="@id/btn"
-                        android:src="@android:drawable/ic_menu_info_details">
-                    </ImageButton>
+                <ImageButton
+                    android:id="@+id/btn"
+                    style="@style/search_edit_btn"
+                    android:contentDescription="@string/str_TODO"
+                    android:src="@android:drawable/ic_menu_sort_by_size"/>
 
-                    <ImageButton
-                        android:id="@+id/btn_voice"
-                        style="@style/search_btn"
-                        android:layout_toEndOf="@id/btn_filter"
-                        android:src="@android:drawable/ic_menu_agenda">
-                    </ImageButton>
-                </LinearLayout>
-            </RelativeLayout >
+                <ImageButton
+                    android:id="@+id/btn_filter"
+                    style="@style/search_edit_btn"
+                    android:contentDescription="@string/str_TODO"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+
+                <ImageButton
+                    android:id="@+id/btn_voice"
+                    style="@style/search_edit_btn"
+                    android:contentDescription="@string/str_TODO"
+                    android:src="@android:drawable/ic_menu_agenda" />
+            </FrameLayout>
             <!-- layout_edit_left -->
 
 

@@ -66,16 +66,15 @@
         <item name="android:layout_marginHorizontal">16dp</item>
         <item name="android:hint">@string/btn_search</item>
         <item name="android:maxLines">1</item>
-        <item name="android:inputType">text</item>
         <item name="android:gravity">left|center_vertical</item>
     </style>
 
-    <style name="search_btn" parent="Theme.search_edit">
-        <item name="android:layout_width">@dimen/icon_size_16</item>
-        <item name="android:layout_height">@dimen/icon_size_16</item>
+    <style name="search_edit_btn" parent="Theme.search_edit_btn">
+        <item name="android:layout_width">@dimen/icon_size_24</item>
+        <item name="android:layout_height">@dimen/icon_size_24</item>
         <item name="android:layout_marginVertical">10dp</item>
-        <item name="android:layout_marginHorizontal">8dp</item>
-        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_gravity">end|center_vertical</item>
         <item name="android:visibility">visible</item>
     </style>
 

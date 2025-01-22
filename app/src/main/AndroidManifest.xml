@@ -13,7 +13,7 @@
         android:theme="@style/Base.Theme.PlaylistMaker"
         tools:targetApi="31">
         <activity
-            android:name=".MediaLibActivity"
+            android:name=".LibraryActivity"
             android:exported="false" />
         <activity
             android:windowSoftInputMode="stateVisible"

@@ -46,7 +46,7 @@
             <Button android:id="@+id/btn_filter_list"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:gravity="right|center"
+                android:gravity="end|center"
                 android:layout_margin="4dp"
                 android:visibility="invisible">
             </Button>

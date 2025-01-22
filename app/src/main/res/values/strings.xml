@@ -14,4 +14,6 @@
     <string name="str_message">Спасибо разработчикам и разработчицам за крутое приложение!</string>
     <string name="str_share_link">https://practicum.yandex.ru/profile/android-developer-plus/</string>
     <string name="str_agree_link">https://yandex.ru/legal/practicum_offer/</string>
+    <string name="str_TODO">TODO</string>
+    <string name="str_clear">Очистить</string>
 </resources>

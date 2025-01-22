@@ -22,25 +22,21 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
+        /**
+         *  @see https://developer.android.com/guide/components/intents-common?hl=ru
+         *  @see RFC2396
+         */
         btnSupport.setOnClickListener {
 
             val intent =  Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:"))
 
-            val mailto = "mailto:bob@example.org" //?cc=bob@example.ru&subject=subject&body=bodyText"
-            intent.setData(Uri.parse(mailto)) //   fromParts("mailto", getString(R.string.str_email), null)) //parse("mailto:?subject=" + "subject" + "&body=" + "body"))
-//            intent.setType("message/rfc822")
-//            intent.addCategory(Intent.CATEGORY_APP_EMAIL)
+            intent.putExtra(Intent.EXTRA_EMAIL,     arrayOf(getString(R.string.str_email)))
+            intent.putExtra(Intent.EXTRA_SUBJECT,   getString(R.string.str_subject))
+            intent.putExtra(Intent.EXTRA_TEXT,      getString(R.string.str_message));
 
-//            intent.putExtra(Intent.EXTRA_EMAIL,     arrayOf(getString(R.string.str_email)))
-//            intent.putExtra(Intent.EXTRA_SUBJECT,   getString(R.string.str_subject))
-//            intent.putExtra(Intent.EXTRA_TEXT,      getString(R.string.str_message));
-//            Log.d("my1", intent.type.toString())
-//            Log.d("my1", "mailto:" + getString(R.string.str_email))
+            startActivity(intent)
 
-//            if(intent.resolveActivity(packageManager) != null)
-                startActivity(intent)
-//            startActivity(Intent.createChooser(intent, "email"))
-            Toast.makeText(this, "mailto:" + getString(R.string.str_email), Toast.LENGTH_SHORT)
         }
 
         btnShare.setOnClickListener {

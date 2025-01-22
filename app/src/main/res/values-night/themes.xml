@@ -43,4 +43,10 @@
         <item name="tint">@color/dark_edit_text</item>
         <item name="android:textColorHint">@color/dark_edit_text</item>
     </style>
+
+    <style name="Theme.search_edit_btn" parent="Widget.MaterialComponents.Button.UnelevatedButton" >
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="iconTint">@color/dark_edit_search_icon_btn</item>
+    </style>
+
 </resources>

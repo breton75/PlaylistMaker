@@ -17,4 +17,6 @@
     <color name="dark_edit_text">#1A1B22</color>
     <color name="light_edit_search_icon_frg">#AEAFB4</color>
     <color name="dark_edit_search_icon_frg">#1A1B22</color>
+    <color name="light_edit_search_icon_btn">#99A2AD</color>
+    <color name="dark_edit_search_icon_btn">#99A2AD</color>
 </resources>
