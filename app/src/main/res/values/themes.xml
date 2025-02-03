@@ -48,4 +48,32 @@
         <item name="iconTint">@color/light_edit_search_icon_btn</item>
     </style>
 
+    <style name="Theme.search_track_image" parent="Theme.Material3.DayNight.NoActionBar" >
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="iconTint">@color/light_icon_frg</item>
+        <item name="tint">@color/light_icon_frg</item>
+    </style>
+
+    <style name="Theme.search_track_name" parent="Theme.Material3.DayNight.NoActionBar" >
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="iconTint">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.search_track_info" parent="Theme.Material3.DayNight.NoActionBar" >
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="iconTint">@color/light_icon_frg</item>
+        <item name="android:textColor">@color/light_icon_frg</item>
+        <item name="android:tint">@color/light_icon_frg</item>
+    </style>
+
+    <style name="Theme.search_fwd_btn" parent="Widget.MaterialComponents.Button.UnelevatedButton" >
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="iconTint">@color/light_icon_frg</item>
+    </style>
+
+    <style name="Theme.search_holder" parent="Base.Theme.PlaylistMaker" >
+        <item name="android:background">@color/white</item>
+    </style>
+
 </resources>

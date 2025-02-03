@@ -3,9 +3,11 @@
     <dimen name="btn_corner_radius">16dp</dimen>
     <dimen name="settings_item_btn_width">24dp</dimen>
     <dimen name="settings_item_btn_height">24dp</dimen>
-    <dimen name="settings_font_size">16sp</dimen>
     <dimen name="header_font_size">22sp</dimen>
     <dimen name="edit_corner_radius">8dp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_11">11sp</dimen>
     <dimen name="icon_size_16">16dp</dimen>
     <dimen name="icon_size_24">24dp</dimen>
+    <dimen name="icon_size_45">45dp</dimen>
 </resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/track_frame"
+    android:layout_width="match_parent"
+    android:layout_height="61dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingStart="13dp"
+    android:paddingEnd="12dp"
+    style="@style/Theme.search_holder">
+
+    <ImageView
+        android:id="@+id/track_image"
+        style="@style/search_track_image"
+        android:src="@drawable/placeholder"
+        android:contentDescription="@string/str_search_img_description"/>
+
+    <LinearLayout
+        android:id="@+id/track_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="start|center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/track_name"
+            tools:text="@string/mock_text"
+            style="@style/search_track_name"/>
+
+        <LinearLayout
+            android:id="@+id/track_info"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="13dp">
+
+            <TextView
+                android:id="@+id/track_singer"
+                style="@style/search_track_singer"
+                tools:text="@string/mock_text"/>
+
+            <ImageView
+                android:id="@+id/ellipse1"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="start|center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/ellipse"
+                style="@style/Theme.search_track_info"/>
+
+            <TextView
+                android:id="@+id/track_duration"
+                style="@style/search_track_duartion"
+                tools:text="5:12"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/track_btn_fwd"
+        style="@style/search_track_icon"
+        android:src="@drawable/arrow_forward"
+        android:contentDescription="@string/str_search_goto_track_description"/>
+
+</LinearLayout>

@@ -1,4 +1,5 @@
 <resources>
+    <string name="mock_text">ThisIsMockText ThisIsMockText ThisIsMockText ThisIsMockText</string>
     <string name="app_name">PlaylistMaker</string>
     <string name="title">Playlist maker</string>
     <string name="btn_search">Поиск</string>
@@ -16,4 +17,7 @@
     <string name="str_agree_link">https://yandex.ru/legal/practicum_offer/</string>
     <string name="str_TODO">TODO</string>
     <string name="str_clear">Очистить</string>
+
+    <string name="str_search_img_description">Обложка трека</string>
+    <string name="str_search_goto_track_description">Переход к треку</string>
 </resources>

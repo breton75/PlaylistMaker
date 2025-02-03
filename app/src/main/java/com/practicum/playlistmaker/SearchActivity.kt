@@ -12,6 +12,15 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
+data class Track(
+    val trackName: String,       // Название композиции
+    val artistName: String,      // Имя исполнителя
+    val trackTime: String,       // Продолжительность трека
+    val artworkUrl100: String    // Ссылка на изображение обложки
+)
 
 class SearchActivity : AppCompatActivity() {
 
@@ -55,6 +64,9 @@ class SearchActivity : AppCompatActivity() {
 
         inputEditText.addTextChangedListener(textWatcher)
         clearButton.callOnClick()
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
     }
 
