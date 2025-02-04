@@ -17,6 +17,6 @@ class LibraryActivity : AppCompatActivity() {
 
         val image = findViewById<ImageView>(R.id.image)
 
-        Glide.with(applicationContext).load(imageUrl).centerInside().transform(RoundedCorners(10)).into(image)
+        Glide.with(applicationContext).load(MockData.getData()[1].artworkUrl100).centerInside().transform(RoundedCorners(10)).into(image)
     }
 }

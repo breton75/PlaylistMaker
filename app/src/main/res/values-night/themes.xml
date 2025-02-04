@@ -51,7 +51,7 @@
 
     <style name="Theme.search_track_image" parent="Theme.Material3.DayNight.NoActionBar" >
         <item name="android:backgroundTint">@color/dark_background_0</item>
-        <item name="tint">@color/light_icon_frg</item>
+        <item name="iconTint">@color/light_icon_frg</item>
     </style>
 
     <style name="Theme.search_track_name" parent="Theme.Material3.DayNight.NoActionBar" >
