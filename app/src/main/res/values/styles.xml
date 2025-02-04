@@ -82,6 +82,7 @@
         <item name="android:layout_width">@dimen/icon_size_45</item>
         <item name="android:layout_height">@dimen/icon_size_45</item>
         <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:scaleType">fitCenter</item>
     </style>
 
     <style name="search_track_name" parent="Theme.search_track_name">
@@ -110,14 +111,14 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="search_track_icon" parent="Theme.search_track_info">
+    <style name="search_track_duartion" parent="search_track_info">
+        <item name="android:layout_width">64dp</item>
+    </style>
+
+    <style name="search_track_btn" parent="Theme.search_track_info">
         <item name="android:layout_width">@dimen/icon_size_24</item>
         <item name="android:layout_height">@dimen/icon_size_24</item>
         <item name="android:visibility">visible</item>
-    </style>
-
-    <style name="search_track_duartion" parent="search_track_info">
-        <item name="android:layout_width">64dp</item>
     </style>
 
 </resources>

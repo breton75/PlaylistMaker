@@ -63,7 +63,7 @@
 
     <ImageButton
         android:id="@+id/track_btn_fwd"
-        style="@style/search_track_icon"
+        style="@style/search_track_btn"
         android:src="@drawable/arrow_forward"
         android:contentDescription="@string/str_search_goto_track_description"/>
 
