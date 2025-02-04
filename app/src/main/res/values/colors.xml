@@ -2,6 +2,21 @@
 <resources>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="gray">#AEAFB4</color>
-    <color name="main">#3772E7</color>
+    <color name="light_background_0">#3772E7</color>
+    <color name="dark_background_0">#1A1B22</color>
+    <color name="light_icon_frg">#AEAFB4</color>
+    <color name="dark_icon_frg">@color/white</color>
+    <color name="light_icon_bkg">@color/white</color>
+    <color name="dark_icon_bkg">@color/dark_background_0</color>
+    <color name="light_switch_frg">#AEAFB4</color>
+    <color name="light_switch_bkg">#E6E8EB</color>
+    <color name="light_edit_cursor">#3772E7</color>
+    <color name="dark_edit_cursor">#3F8AE0</color>
+    <color name="dark_background_1">#9FBBF3</color>
+    <color name="light_edit_text">#AEAFB4</color>
+    <color name="dark_edit_text">#1A1B22</color>
+    <color name="light_edit_search_icon_frg">#AEAFB4</color>
+    <color name="dark_edit_search_icon_frg">#1A1B22</color>
+    <color name="light_edit_search_icon_btn">#99A2AD</color>
+    <color name="dark_edit_search_icon_btn">#99A2AD</color>
 </resources>

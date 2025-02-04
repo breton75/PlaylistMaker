@@ -5,16 +5,38 @@
     android:id="@+id/library"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MediaLibActivity">
+    tools:context=".LibraryActivity">
 
-    <TextView
-        android:id="@+id/text_view_title"
+    <LinearLayout
+        android:id="@+id/layout_library"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/btn_library"
-        android:textSize="@dimen/header_font_size"
-        android:textColor="@color/black"
-        android:background="@color/gray">
-    </TextView>
+        android:orientation="vertical"
+        android:gravity="top"
+        android:padding="0dp"
+        style="@style/Theme.settings">
+
+        <TextView
+            android:id="@+id/library_text_view_title"
+            style="@style/title_other"
+            android:text="@string/btn_library">
+        </TextView>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@color/black"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:background="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
