@@ -33,9 +33,11 @@ class TrackViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         Glide.with(itemView).load(data.artworkUrl100)
             .placeholder(R.drawable.placeholder)
+            .error(R.drawable.placeholder)
             .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .skipMemoryCache(true)
             .centerInside()
-            .transform(RoundedCorners(10))
+            .transform(RoundedCorners(2))
             .into(trackImage)
     }
 
