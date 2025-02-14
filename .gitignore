@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+/.idea/encodings.xml
+/.idea/render.experimental.xml
+/.idea/dictionaries/S_Sviridov.xml

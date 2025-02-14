@@ -7,14 +7,125 @@
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
 
-    <TextView
-        android:id="@+id/text_view_title"
+    <LinearLayout
+        android:id="@+id/layout_global"
+        style="@style/Theme.settings"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/btn_search"
-        android:textSize="@dimen/header_font_size"
-        android:textColor="@color/black"
-        android:background="@color/gray">
-    </TextView>
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:id="@+id/layout_panel_header"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_arrow_back"
+                    style="@style/settings_btn_back"/>
+
+                <TextView
+                    android:id="@+id/text_view_title"
+                    style="@style/title_other"
+                    android:text="@string/btn_search"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_search_list"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="4dp"
+                android:gravity="end|center"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            style="@style/Theme.settings"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/layout_edit_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="8dp"
+                android:gravity="start|center_vertical">
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    style="@style/search_edit"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_edit_text"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/search_edit"
+                    android:inputType="text"
+                    android:textCursorDrawable="@drawable/edit_cursor"/>
+
+                <ImageButton
+                    android:id="@+id/btn_clear"
+                    style="@style/search_edit_btn"
+                    android:contentDescription="@android:string/cancel"
+                    android:scaleType="center"
+                    android:src="@drawable/close_clear" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_right"
+                style="@style/Theme.settings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end|center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/btn"
+                    style="@style/search_edit_btn"
+                    android:contentDescription="@string/str_TODO"
+                    android:src="@android:drawable/ic_menu_sort_by_size"/>
+
+                <ImageButton
+                    android:id="@+id/btn_filter"
+                    style="@style/search_edit_btn"
+                    android:contentDescription="@string/str_TODO"
+                    android:src="@android:drawable/ic_menu_info_details"/>
+
+                <ImageButton
+                    android:id="@+id/btn_voice"
+                    style="@style/search_edit_btn"
+                    android:contentDescription="@string/str_TODO"
+                    android:src="@android:drawable/ic_menu_agenda" />
+            </FrameLayout>
+            <!-- layout_edit_left -->
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTracks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/track"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
